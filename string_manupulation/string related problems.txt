@@ -1,0 +1,236 @@
+Sure! Here are 20 Python problems focused on string manipulation, along with their solutions:
+
+### Problems
+
+1. **Count Characters**
+   Write a Python program to count the number of each character in a string.
+
+2. **Remove Punctuation**
+   Write a Python program to remove all punctuation from a string.
+
+3. **Find Substring**
+   Write a Python program to find if a substring exists within a string.
+
+4. **String Slicing**
+   Write a Python program to slice a string into two halves.
+
+5. **Anagram Check**
+   Write a Python program to check if two strings are anagrams of each other.
+
+6. **Case Conversion**
+   Write a Python program to convert all characters of a string to uppercase, lowercase, and title case.
+
+7. **Remove Whitespace**
+   Write a Python program to remove leading and trailing whitespace from a string.
+
+8. **Reverse Words**
+   Write a Python program to reverse the order of words in a string.
+
+9. **Remove Duplicates**
+   Write a Python program to remove duplicate characters from a string.
+
+10. **Longest Word**
+    Write a Python program to find the longest word in a string.
+
+11. **Count Substring**
+    Write a Python program to count the occurrences of a substring in a string.
+
+12. **String Palindrome**
+    Write a Python program to check if a string is a palindrome, ignoring case and spaces.
+
+13. **Replace Substring**
+    Write a Python program to replace all occurrences of a substring in a string with another substring.
+
+14. **Character Frequency**
+    Write a Python program to find the frequency of each character in a string.
+
+15. **Capitalize Words**
+    Write a Python program to capitalize the first letter of each word in a string.
+
+16. **Remove Vowels**
+    Write a Python program to remove all vowels from a string.
+
+17. **Check Alphabetic**
+    Write a Python program to check if all characters in a string are alphabetic.
+
+18. **Swap Case**
+    Write a Python program to swap the case of each character in a string.
+
+19. **Find Unique Characters**
+    Write a Python program to find all unique characters in a string.
+
+20. **Reverse String**
+    Write a Python program to reverse a string without using slicing.
+
+### Solutions
+
+1. **Count Characters**
+   ```python
+   from collections import Counter
+
+   string = input("Enter a string: ")
+   count = Counter(string)
+   print(count)
+   ```
+
+2. **Remove Punctuation**
+   ```python
+   import string
+
+   s = input("Enter a string: ")
+   no_punct = s.translate(str.maketrans('', '', string.punctuation))
+   print(no_punct)
+   ```
+
+3. **Find Substring**
+   ```python
+   s = input("Enter the main string: ")
+   sub = input("Enter the substring: ")
+   if sub in s:
+       print("Substring exists in the main string.")
+   else:
+       print("Substring does not exist in the main string.")
+   ```
+
+4. **String Slicing**
+   ```python
+   s = input("Enter a string: ")
+   mid = len(s) // 2
+   first_half = s[:mid]
+   second_half = s[mid:]
+   print("First half:", first_half)
+   print("Second half:", second_half)
+   ```
+
+5. **Anagram Check**
+   ```python
+   from collections import Counter
+
+   s1 = input("Enter first string: ")
+   s2 = input("Enter second string: ")
+
+   if Counter(s1) == Counter(s2):
+       print("Strings are anagrams.")
+   else:
+       print("Strings are not anagrams.")
+   ```
+
+6. **Case Conversion**
+   ```python
+   s = input("Enter a string: ")
+   print("Uppercase:", s.upper())
+   print("Lowercase:", s.lower())
+   print("Title case:", s.title())
+   ```
+
+7. **Remove Whitespace**
+   ```python
+   s = input("Enter a string: ")
+   trimmed = s.strip()
+   print("String without leading and trailing whitespace:", trimmed)
+   ```
+
+8. **Reverse Words**
+   ```python
+   s = input("Enter a string: ")
+   words = s.split()
+   reversed_words = ' '.join(reversed(words))
+   print("Reversed words:", reversed_words)
+   ```
+
+9. **Remove Duplicates**
+   ```python
+   s = input("Enter a string: ")
+   result = ''.join(sorted(set(s), key=s.index))
+   print("String without duplicates:", result)
+   ```
+
+10. **Longest Word**
+    ```python
+    s = input("Enter a string: ")
+    words = s.split()
+    longest = max(words, key=len)
+    print("Longest word:", longest)
+    ```
+
+11. **Count Substring**
+    ```python
+    s = input("Enter a string: ")
+    sub = input("Enter the substring: ")
+    count = s.count(sub)
+    print("Occurrences of substring:", count)
+    ```
+
+12. **String Palindrome**
+    ```python
+    s = input("Enter a string: ").replace(" ", "").lower()
+    if s == s[::-1]:
+        print("String is a palindrome.")
+    else:
+        print("String is not a palindrome.")
+    ```
+
+13. **Replace Substring**
+    ```python
+    s = input("Enter a string: ")
+    old = input("Enter the substring to replace: ")
+    new = input("Enter the new substring: ")
+    replaced_string = s.replace(old, new)
+    print("String after replacement:", replaced_string)
+    ```
+
+14. **Character Frequency**
+    ```python
+    from collections import Counter
+
+    s = input("Enter a string: ")
+    freq = Counter(s)
+    print("Character frequencies:", freq)
+    ```
+
+15. **Capitalize Words**
+    ```python
+    s = input("Enter a string: ")
+    capitalized = s.title()
+    print("Capitalized string:", capitalized)
+    ```
+
+16. **Remove Vowels**
+    ```python
+    s = input("Enter a string: ")
+    vowels = "aeiouAEIOU"
+    no_vowels = ''.join([char for char in s if char not in vowels])
+    print("String without vowels:", no_vowels)
+    ```
+
+17. **Check Alphabetic**
+    ```python
+    s = input("Enter a string: ")
+    if s.isalpha():
+        print("All characters are alphabetic.")
+    else:
+        print("Not all characters are alphabetic.")
+    ```
+
+18. **Swap Case**
+    ```python
+    s = input("Enter a string: ")
+    swapped = s.swapcase()
+    print("String with swapped case:", swapped)
+    ```
+
+19. **Find Unique Characters**
+    ```python
+    s = input("Enter a string: ")
+    unique_chars = ''.join(set(s))
+    print("Unique characters:", unique_chars)
+    ```
+
+20. **Reverse String**
+    ```python
+    s = input("Enter a string: ")
+    reversed_string = ''.join(reversed(s))
+    print("Reversed string:", reversed_string)
+    ```
+
+These problems and solutions will help you practice and improve your string manipulation skills in Python. Happy coding!

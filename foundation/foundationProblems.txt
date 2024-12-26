@@ -1,0 +1,277 @@
+Sure, here are 20 basic Python problems to start with. These problems cover a range of fundamental concepts and will help you get comfortable with Python programming:
+
+### 1. Hello World
+Write a Python program that prints "Hello, World!".
+
+### 2. Simple Arithmetic
+Write a Python program that takes two numbers from the user and prints their sum, difference, product, and quotient.
+
+### 3. Even or Odd
+Write a Python program that takes a number from the user and prints whether it is even or odd.
+
+### 4. Prime Number Check
+Write a Python program that checks if a given number is a prime number.
+
+### 5. Factorial
+Write a Python program to calculate the factorial of a given number.
+
+### 6. Fibonacci Sequence
+Write a Python program to generate the first n numbers in the Fibonacci sequence.
+
+### 7. Palindrome Check
+Write a Python program that checks if a given string is a palindrome.
+
+### 8. Count Vowels
+Write a Python program to count the number of vowels in a given string.
+
+### 9. Reverse a String
+Write a Python program that takes a string from the user and prints the string in reverse.
+
+### 10. Sum of Digits
+Write a Python program that takes a number from the user and prints the sum of its digits.
+
+### 11. Multiplication Table
+Write a Python program to print the multiplication table of a given number.
+
+### 12. List Minimum and Maximum
+Write a Python program that finds the minimum and maximum values in a list of numbers.
+
+### 13. List Comprehension
+Write a Python program to generate a list of squares of numbers from 1 to 10 using list comprehension.
+
+### 14. Dictionary Keys and Values
+Write a Python program that takes a dictionary and prints its keys and values.
+
+### 15. Count Words in a String
+Write a Python program to count the number of words in a given string.
+
+### 16. Remove Duplicates from List
+Write a Python program that removes duplicate elements from a list.
+
+### 17. Sort a List
+Write a Python program to sort a list of numbers in ascending order.
+
+### 18. Merge Two Lists
+Write a Python program to merge two lists into a single list.
+
+### 19. Find Common Elements in Lists
+Write a Python program to find the common elements between two lists.
+
+### 20. Simple Calculator
+Write a Python program that acts as a simple calculator, allowing the user to perform basic arithmetic operations (addition, subtraction, multiplication, division).
+
+These problems should provide a good foundation in Python programming. Try to solve them on your own and look up documentation or examples if you get stuck. Happy coding!
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Sure! Here are the solutions to each of the problems:
+
+### 1. Hello World
+```python
+print("Hello, World!")
+```
+
+### 2. Simple Arithmetic
+```python
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+
+print("Sum:", a + b)
+print("Difference:", a - b)
+print("Product:", a * b)
+print("Quotient:", a / b)
+```
+
+### 3. Even or Odd
+```python
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print(num, "is even")
+else:
+    print(num, "is odd")
+```
+
+### 4. Prime Number Check
+```python
+num = int(input("Enter a number: "))
+
+if num > 1:
+    for i in range(2, int(num ** 0.5) + 1):
+        if (num % i) == 0:
+            print(num, "is not a prime number")
+            break
+    else:
+        print(num, "is a prime number")
+else:
+    print(num, "is not a prime number")
+```
+
+### 5. Factorial
+```python
+num = int(input("Enter a number: "))
+factorial = 1
+
+for i in range(1, num + 1):
+    factorial *= i
+
+print("Factorial of", num, "is", factorial)
+```
+
+### 6. Fibonacci Sequence
+```python
+n = int(input("Enter the number of terms: "))
+a, b = 0, 1
+fib_sequence = []
+
+for _ in range(n):
+    fib_sequence.append(a)
+    a, b = b, a + b
+
+print("Fibonacci sequence:", fib_sequence)
+```
+
+### 7. Palindrome Check
+```python
+string = input("Enter a string: ")
+
+if string == string[::-1]:
+    print(string, "is a palindrome")
+else:
+    print(string, "is not a palindrome")
+```
+
+### 8. Count Vowels
+```python
+string = input("Enter a string: ")
+vowels = "aeiouAEIOU"
+count = 0
+
+for char in string:
+    if char in vowels:
+        count += 1
+
+print("Number of vowels:", count)
+```
+
+### 9. Reverse a String
+```python
+string = input("Enter a string: ")
+print("Reversed string:", string[::-1])
+```
+
+### 10. Sum of Digits
+```python
+num = input("Enter a number: ")
+sum_of_digits = sum(int(digit) for digit in num)
+print("Sum of digits:", sum_of_digits)
+```
+
+### 11. Multiplication Table
+```python
+num = int(input("Enter a number: "))
+
+for i in range(1, 11):
+    print(num, "x", i, "=", num * i)
+```
+
+### 12. List Minimum and Maximum
+```python
+numbers = [int(x) for x in input("Enter numbers separated by space: ").split()]
+
+print("Minimum value:", min(numbers))
+print("Maximum value:", max(numbers))
+```
+
+### 13. List Comprehension
+```python
+squares = [x**2 for x in range(1, 11)]
+print("Squares from 1 to 10:", squares)
+```
+
+### 14. Dictionary Keys and Values
+```python
+my_dict = {"name": "John", "age": 30, "city": "New York"}
+
+print("Keys:", my_dict.keys())
+print("Values:", my_dict.values())
+```
+
+### 15. Count Words in a String
+```python
+string = input("Enter a string: ")
+words = string.split()
+print("Number of words:", len(words))
+```
+
+### 16. Remove Duplicates from List
+```python
+numbers = [int(x) for x in input("Enter numbers separated by space: ").split()]
+unique_numbers = list(set(numbers))
+print("List without duplicates:", unique_numbers)
+```
+
+### 17. Sort a List
+```python
+numbers = [int(x) for x in input("Enter numbers separated by space: ").split()]
+numbers.sort()
+print("Sorted list:", numbers)
+```
+
+### 18. Merge Two Lists
+```python
+list1 = [int(x) for x in input("Enter numbers for list 1 separated by space: ").split()]
+list2 = [int(x) for x in input("Enter numbers for list 2 separated by space: ").split()]
+
+merged_list = list1 + list2
+print("Merged list:", merged_list)
+```
+
+### 19. Find Common Elements in Lists
+```python
+list1 = [int(x) for x in input("Enter numbers for list 1 separated by space: ").split()]
+list2 = [int(x) for x in input("Enter numbers for list 2 separated by space: ").split()]
+
+common_elements = list(set(list1) & set(list2))
+print("Common elements:", common_elements)
+```
+
+### 20. Simple Calculator
+```python
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Division by zero is not allowed"
+
+print("Select operation:")
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+
+choice = input("Enter choice (1/2/3/4): ")
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+if choice == '1':
+    print("Result:", add(num1, num2))
+elif choice == '2':
+    print("Result:", subtract(num1, num2))
+elif choice == '3':
+    print("Result:", multiply(num1, num2))
+elif choice == '4':
+    print("Result:", divide(num1, num2))
+else:
+    print("Invalid input")
+```
+
+These solutions cover a range of basic Python concepts including input/output, loops, conditionals, functions, lists, and dictionaries. Happy coding!
